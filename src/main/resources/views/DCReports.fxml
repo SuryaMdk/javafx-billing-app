@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.str.billing.controller.DCReportsController" 
+			stylesheets="@style/application.css" styleClass="root-pane">
+    <top>
+        <VBox spacing="10">
+                <!-- Top HBox with Title and Filters -->
+		    <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="40" VBox.vgrow="NEVER">
+		        <Label text="Delivery Challan Reports" styleClass="header-label"/>
+		        
+		        <!-- Spacer -->
+		        <Pane HBox.hgrow="ALWAYS" />
+		
+				<!-- Customer Filter -->	
+				<Label text="Customer:" />
+				<ComboBox fx:id="comboCustomerName"  prefWidth="180"/>
+								
+		        <!-- From and To Date Filters with Buttons -->
+		        <Label text="From:" />
+		        <DatePicker fx:id="dpFromDate" prefWidth="120" />
+		        
+		        <Label text="To:" />
+		        <DatePicker fx:id="dpToDate" prefWidth="120" />
+		
+		        <Button text="Filter" onAction="#handleFilterDCs" styleClass="btn, btn-small, btn-update"/>
+		        <Button text="Reset" onAction="#handleResetFilter" styleClass="btn, btn-small, btn-delete"/>
+		    </HBox>
+		    
+            <TableView fx:id="dcTable" prefHeight="250" styleClass="table">
+                <columns>
+                    <TableColumn fx:id="colSno" text="S.No" prefWidth="100" />
+                    <TableColumn fx:id="colDCId" text="DC ID" prefWidth="100" />
+                    <TableColumn fx:id="colCustomerName" text="Customer Name" prefWidth="250" />
+                    <TableColumn fx:id="colOrderDate" text="Order Date" prefWidth="100" />
+                    <TableColumn fx:id="colDeliveryDate" text="Delivery Date" prefWidth="100" /> 
+                    <TableColumn fx:id="colCreatedAt" text="Created At" prefWidth="150" />
+                   <!--  <TableColumn fx:id="colUpdatedAt" text="Updated At" prefWidth="150" /> -->
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Save" onAction="#handleSaveDC" styleClass="btn,btn-add" />
+                <Button text="Print" onAction="#handlePrintDC" styleClass="btn,btn-edit" />
+                <Button text="Export" onAction="#handleExportDCs" styleClass="btn,btn-update"/>
+                <Button text="Delete" onAction="#handleDeleteDC" styleClass="btn,btn-delete" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <Label text="DC Items" styleClass="header-label" />
+
+            <TableView fx:id="dcItemsTable" prefHeight="250" styleClass="table">
+                <columns>
+                    <TableColumn fx:id="colItemSno" text="S.No" prefWidth="60" />
+                    <TableColumn fx:id="colItemDCId" text="DC ID" prefWidth="100" />
+                    <TableColumn fx:id="colItemId" text="Item ID" prefWidth="100" />
+                    <TableColumn fx:id="colDescription" text="Description" prefWidth="300" />
+                    <TableColumn fx:id="colQuantity" text="Quantity" prefWidth="80" />
+                    <TableColumn fx:id="colRemarks" text="Remarks" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

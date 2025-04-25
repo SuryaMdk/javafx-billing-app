@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.str.billing.controller.CustomerController"
+      stylesheets="@style/application.css" spacing="20" styleClass="root-pane">
+    <!-- Top title -->
+    <Label text="Customer Management" styleClass="header-label" />
+
+    <VBox spacing="15" alignment="CENTER" styleClass="form-card">
+        <GridPane hgap="20" vgap="12" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints minWidth="30" halignment="RIGHT"/>
+                <ColumnConstraints minWidth="250" halignment="LEFT"/>
+                <ColumnConstraints minWidth="50" halignment="RIGHT"/>
+                <ColumnConstraints minWidth="250" halignment="LEFT"/>
+            </columnConstraints>
+
+            <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtCustomerName" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="GSTIN:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtGst" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="Address:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <TextField fx:id="txtAddress" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+
+            <Label text="Phone No:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <TextField fx:id="txtPhone" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+        </GridPane>
+
+        <HBox spacing="15" alignment="CENTER" style="-fx-padding:10">
+            <Button text="Add" onAction="#handleAddCustomer" styleClass="btn,btn-add"/>
+            <Button text="Edit" onAction="#handleEditCustomer" styleClass="btn,btn-edit"/>
+            <Button text="Update" onAction="#handleUpdateCustomer" styleClass="btn,btn-update"/>
+            <Button text="Delete" onAction="#handleDeleteCustomer" styleClass="btn,btn-delete"/>
+            <Button text="Clear" onAction="#handleClearFields" styleClass="btn,btn-clear"/>
+        </HBox>
+    </VBox>
+
+    <TableView fx:id="customerTable" prefHeight="300" styleClass="table">
+        <columns>
+        	<TableColumn fx:id="colSno" text="S.No" prefWidth="100" />
+            <TableColumn text="Customer ID" fx:id="colCustomerId" prefWidth="100"/>
+            <TableColumn text="Name" fx:id="colName" prefWidth="180"/>
+            <TableColumn text="Address" fx:id="colAddress" prefWidth="300"/>
+            <TableColumn text="GSTIN" fx:id="colGst" prefWidth="150"/>
+            <TableColumn text="Phone" fx:id="colPhone" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

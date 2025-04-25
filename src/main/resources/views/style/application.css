@@ -1,0 +1,297 @@
+/* changing all fonts */
+.root-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.header-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.form-card {
+    -fx-padding: 15;
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #D5D8DC;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.customer-table {
+    -fx-background-color: #FBFCFC;
+    -fx-border-color: #D5D8DC;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+}
+
+.btn {
+    -fx-text-fill: white;
+    -fx-padding: 6 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-pref-width: 100;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-small {
+	-fx-padding: 5 15;
+    -fx-pref-width: 80;
+}
+
+.btn-big {
+	-fx-padding: 6 10;
+	-fx-pref-width: 120;
+}
+.btn-add {
+    -fx-background-color: #27AE60;
+}
+
+.btn-edit {
+    -fx-background-color: #2980B9;
+}
+
+.btn-update {
+    -fx-background-color: #17A589;
+}
+
+.btn-delete {
+    -fx-background-color: #C0392B;
+}
+
+.btn-clear {
+    -fx-background-color: #95A5A6;
+}
+
+.invoice-table {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 6;
+    -fx-font-size: 14px;
+}
+
+.summary-box {
+    -fx-padding: 10;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-background-color: #f9f9f9;
+    -fx-pref-width: 300;
+}
+
+.summary-total-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.table {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+    -fx-table-cell-border-color: transparent;
+    -fx-selection-bar: #e0f0ff;
+    -fx-selection-bar-non-focused: #bcdfff;
+}
+.table .table-row-cell:selected .table-cell {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+/* Optional: hover effect */
+.table .table-row-cell:hover {
+    -fx-background-color: #e1f3ff;
+}
+
+/* Table Header Styling */
+.table .column-header-background {
+    -fx-background-color: #2c3e50;
+    -fx-border-radius: 8 8 0 0;
+}
+
+.table .column-header .label{
+	-fx-text-fill: white;
+}
+.table .column-header,
+.table .filler {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Table Row Styling */
+.table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table .table-row-cell:even {
+    -fx-background-color: #f5f7fa;
+}
+
+.table .table-row-cell:hover {
+    -fx-background-color: #d0ecff;
+    -fx-text-fill: #000000;
+}
+
+.nav-button {
+    -fx-pref-width: 160px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #EAECEE;
+    -fx-text-fill: #1F618D;
+    -fx-border-color: #D5D8DC;
+    -fx-border-width: 1;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #D6DBDF;
+    -fx-text-fill: #154360;
+}
+
+.dashboard-root {
+    -fx-background-color: #F8F9F9;
+    -fx-padding: 40 20 40 20;
+}
+
+.dashboard-heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.card-blue {
+    -fx-background-color: #3498DB;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-min-width: 180;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 2, 2);
+}
+
+.card-green {
+    -fx-background-color: #28B463;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-min-width: 180;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 2, 2);
+}
+
+.card-red {
+    -fx-background-color: #E74C3C;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-min-width: 180;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 2, 2);
+}
+
+.card-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.card-number {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.quick-actions-container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 3, 0, 1, 1);
+}
+
+.quick-actions-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495E;
+}
+
+.action-btn-blue {
+    -fx-background-color: #3498DB;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-green {
+    -fx-background-color: #1ABC9C;
+     -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-orange {
+    -fx-background-color: #F39C12;
+     -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-purple {
+    -fx-background-color: #8E44AD;  /* Royal Purple */
+     -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-red {
+    -fx-background-color: #E74C3C;  /* Subtle Slate Grey */
+     -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-pink {
+    -fx-background-color: #E91E63;  /* Modern Rose Pink */
+   -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+.action-btn-blue:hover,
+.action-btn-green:hover,
+.action-btn-orange:hover,
+.action-btn-purple:hover,
+.action-btn-red:hover,
+.action-btn-pink:hover {
+    -fx-opacity: 0.85;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.str.billing.controller.DashboardController"
+			stylesheets="@style/application.css" styleClass="dashboard-root">
+
+    <VBox alignment="TOP_CENTER" spacing="30" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+
+        <!-- Heading -->
+        <Label text="Dashboard Overview" styleClass="dashboard-heading"/>
+
+        <!-- Info Boxes Row -->
+        <HBox spacing="40" alignment="CENTER">
+            <VBox alignment="CENTER" spacing="10" styleClass="card-blue">
+                <Label text="Total Customers" styleClass="card-title"/>
+                <Label fx:id="lblTotalCustomers" text="0" styleClass="card-number"/>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10" styleClass="card-green">
+                <Label text="Total Invoices" styleClass="card-title"/>
+                <Label fx:id="lblTotalInvoices" text="0" styleClass="card-number"/>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10" styleClass="card-red">
+                <Label text="Total DCs" styleClass="card-title"/>
+                <Label fx:id="lblTotalDCs" text="0" styleClass="card-number"/>
+            </VBox>
+        </HBox>
+
+        <!-- Quick Actions -->
+        <VBox spacing="15" alignment="CENTER" styleClass="quick-actions-container">
+            <Label text="Quick Actions" styleClass="quick-actions-title"/>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnGenerateInvoice" text="Generate Invoice" styleClass="action-btn-green"/>
+                <Button fx:id="btnInvoiceReports" text="Invoice Reports" styleClass="action-btn-pink"/>
+                <Button fx:id="btnManageCustomers" text="Manage Customers" styleClass="action-btn-blue"/>
+            </HBox>
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnGenerateDC" text="Generate DC" styleClass="action-btn-red"/>
+                <Button fx:id="btnDCReports" text="DC Reports" styleClass="action-btn-orange"/>
+                <Button fx:id="btnManualBackup" text="Backup Now" styleClass="action-btn-purple"/>
+            </HBox>
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.str.billing.controller.MainViewController"
+			stylesheets="@style/application.css">
+
+    <!-- Top Bar with Company Name -->
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #1F618D; -fx-padding: 16;">
+            <Label text="SHARVESH TOOL ROOM"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: white;" />
+        </HBox>
+    </top>
+
+    <!-- Left Sidebar Navigation -->
+    <left>
+        <VBox spacing="12" style="-fx-padding: 20; -fx-background-color: #F2F3F4;">
+            <Button text="Dashboard" fx:id="btnDashboard" styleClass="nav-button"/>
+            <Button text="DC Generation" fx:id="btnDC" styleClass="nav-button"/>
+            <Button text="DC Reports" fx:id="btnDCReports" styleClass="nav-button"/>
+            <Button text="Invoice Generation" fx:id="btnInvoice" styleClass="nav-button"/>
+            <Button text="Invoice Reports" fx:id="btnInvoiceReports" styleClass="nav-button"/>
+            <Button text="Customers" fx:id="btnCustomer" styleClass="nav-button"/>
+            <Button text="Company Details" fx:id="btnCompany" styleClass="nav-button"/>
+        </VBox>
+    </left>
+
+    <!-- Center Content Area -->
+    <center>
+        <AnchorPane fx:id="contentArea" style="-fx-background-color: #FBFCFC;" />
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 4; -fx-background-color: #E5E8E8;">
+            <Label text="© 2025 STR Billing Solutions"
+                   style="-fx-font-size: 11px; -fx-text-fill: #626567;" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
